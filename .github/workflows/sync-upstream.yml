@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Sync main from parent fork
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
           gh api \
